@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h4{
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+h4::after{
+    content: url(../images/About-Line.svg);
+    padding-left: 5px;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: #161616;
+    height: 100vh;
+    padding: 20px;
+
+    a{
+        text-decoration: none;
+    }
+
+    .header__inner{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 35px 1fr 1fr;
+        grid-template-areas: 
+        'a a a'
+        'b c c'
+        'b c c'
+        'b c c';
+        .header__nav{
+            grid-area: a;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: end;
+            gap: 7%;
+            padding-bottom: 10%;
+
+             .active{
+                border-bottom: 3px solid yellow;
+             }           
+        }
+
+        @media screen and (max-width: 360px) {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                'a'
+                'c'
+                'b';
+        }
+
+        .social-media__links{
+            grid-area: b;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 5%;
+
+            @media screen and (max-width: 360px){
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .jane-doe__profile{
+            grid-area: c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 15%;
+
+            .name{
+                color: #FFBE1A;
+                font-size: 40px;
+                font-family: 'Permanent Marker';
+                
+            }
+        }
+    }
+}
+
+main{
+    background-color: #0D0D0D;
+    padding: 10%;
+
+    .about__inner{
+        display: grid;
+        place-content: center;
+        grid-template-columns: 450px 1fr;
+        grid-template-areas: 
+        'a b'
+        'a c'
+        'a d';
+
+        .about__img{
+            grid-area: a;
+        }
+        .about__title{
+            grid-area: b;
+        }
+        .about__skills{
+            grid-area: c;
+        }
+        .about__skills__inner{
+            grid-area: d;
+        }
+
+        .name{
+            font-size: 36px;
+            color: #FFBE1A;
+            font-family: 'Permanent Marker';
+        }
+
+        .about__skills__inner{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            'a b c'
+            'd e f'
+            'g h i';
+
+            .a{
+                grid-area: a;
+            }
+            .b{
+                grid-area: b;
+            }
+            .c{
+                grid-area: c;
+            }
+            .d{
+                grid-area: d;
+            }
+            .e{
+                grid-area: e;
+            }
+            .f{
+                grid-area: f;
+            }
+            .g{
+                grid-area: g;
+            }
+            .h{
+                grid-area: h;
+            }
+            .i{
+                grid-area: i;
+            }
+
+            p::before{
+                content: url(../images/yellow-dot.svg);
+                padding-right: 5px;
+            }
+
+             @media screen and (max-width: 360px){
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                'a b'
+                'c d'
+                'e f'
+                'g h'
+                'i i';
+            }
+        }
+
+    } 
+    
+    @media screen and (max-width: 768px) {
+        .about__inner {
+            grid-template-columns: 1fr;
+            place-items: center;
+            grid-template-areas: 
+                'a'
+                'b'
+                'c'
+                'd';}
+
+        .about__img, .about__title, .about__skills, .about__skills__inner{
+            padding: 3% 0;
+        }
+
+        .about__skills__inner{
+            width: 100%;
+        }
+
+    }
+
+    .about__img img{
+        @media screen and (max-width: 360px){
+            width: 80%;
+        }
+    }
+
+
+
+}
+
+
+.jane__doe-contact-title h3{
+    font-size: 36px;
+    color: #FFBE1A;
+    font-family: 'Permanent Marker';
+}
+
+.jane__doe-contact-input input{
+    background: rgba(184, 184, 184, 0.25);
+    border-radius: 10px;
+    border: none;
+    padding: 10px 55px;
+}
+
+.message {
+    height: 100px;
+}
+
+.jane__doe-contact-button button {
+    background: #FFB800;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    padding: 5px 14px;
+}
+
+.jane__doe-contact {
+    background-color: #161616;
+}
+
+.jane__doe-contact-inner {
+    height: 90vh;
+}
+
+.jane__doe-contact-header {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.jane__doe-contact-together{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.jane__doe-contact-title p{
+    padding: 50px 0;
+}
+
+.jane__doe-contact-input input{
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .jane__doe-contact{
+        padding: 5% 0;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .jane__doe-contact-input input{
+        padding: 1% 1%;
+    }
+
+    .jane__doe-contact-together{
+        padding: 0 5%   ;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .jane__doe-contact{
+        text-align: center;
+        padding-bottom: 70%;
+    }
+    .jane__doe-contact-together{
+        flex-direction: column;
+    }   
+}
+
+footer{
+    background: #FFB800;
+    color: white;
+}
+
+.footer__inner {
+    display: flex;
+    padding: 40px 0;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.footer__links a{
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.footer__title h3{
+    font-family: 'Permanent Marker';
+    font-weight: 400;
+    font-size: 36px;
+    padding: 13px 0;
+}
+
+.footer__title p{
+    font-weight: 400;
+    font-size: 12px;
+}
